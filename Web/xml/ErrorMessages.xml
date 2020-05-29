@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Messages>
+	<Message id="1" parmcount="0">
+		<text>Record save successfully.</text>
+	</Message>
+	<Message id="2" parmcount="0">
+		<text>Record update successfully.</text>
+	</Message>
+	<Message id="3" parmcount="0">
+		<text>Record delete successfully.</text>
+	</Message>
+	<Message id="4" parmcount="0">
+		<text>Record already exist in database.</text>
+	</Message>
+	<Message id="5" parmcount="0">
+		<text>You must enter a Role Name before saving this record.</text>
+	</Message>
+	<Message id="6" parmcount="0">
+		<text>You must enter a Class Name before saving this record.</text>
+	</Message>
+	<Message id="7" parmcount="0">
+		<text>You must enter a Fee Category before saving this record.</text>
+	</Message>
+	<Message id="8" parmcount="0">
+		<text>You must enter a numeric value of amount.</text>
+	</Message>
+	<Message id="9" parmcount="0">
+		<text>You must enter a Student Code before saving this record.</text>
+	</Message>
+	<Message id="10" parmcount="0">
+		<text>You must enter a Student Name before saving this record.</text>
+	</Message>
+	<Message id="11" parmcount="0">
+		<text>You must enter a Father Name before saving this record.</text>
+	</Message>
+	<Message id="12" parmcount="0">
+		<text>DOB is invalid.</text>
+	</Message>
+	<Message id="13" parmcount="0">
+		<text>You must enter a numeric value of Student Code.</text>
+	</Message>
+	<Message id="14" parmcount="0">
+		<text>You must enter a Login ID before saving this record.</text>
+	</Message>
+	<Message id="15" parmcount="0">
+		<text>You must enter a Password before saving this record.</text>
+	</Message>
+	<Message id="16" parmcount="0">
+		<text>You must enter a User Name before saving this record.</text>
+	</Message>
+	<Message id="17" parmcount="0">
+		<text>Login ID already exist.</text>
+	</Message>
+	<Message id="18" parmcount="0">
+		<text>Student Code already exist.</text>
+	</Message>
+	<Message id="19" parmcount="0">
+		<text>Before Saving, There should be at least one record selected in Grid.</text>
+	</Message>
+	<Message id="20" parmcount="0">
+		<text>You must enter a Date before saving this record.</text>
+	</Message>
+	<Message id="21" parmcount="0">
+		<text>Date format is invalid.</text>
+	</Message>
+	<Message id="22" parmcount="0">
+		<text>Before Saving, There should be at least one record selected in List.</text>
+	</Message>
+	<Message id="23" parmcount="0">
+		<text>Bank Voucher created successfully.</text>
+	</Message>	
+</Messages>

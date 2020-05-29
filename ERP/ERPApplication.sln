@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.271
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Commmon", "Commmon", "{509E992C-4A97-4829-8801-C275B4E4BFCC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SharedBin", "SharedBin", "{B3645D2B-57B7-40F9-862C-D5614CBD6025}"
+	ProjectSection(SolutionItems) = preProject
+		Common\SharedBin\AjaxControlToolkit.dll = Common\SharedBin\AjaxControlToolkit.dll
+		Common\SharedBin\itextsharp.dll = Common\SharedBin\itextsharp.dll
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERP.BusinessRules", "BusinessRules\ERP.BusinessRules.csproj", "{8FA3A21E-77D8-4D03-8477-BA7A008EE7F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERP.DAL", "DAL\ERP.DAL.csproj", "{692B00C4-DB92-44F6-A3FA-D33D4ED335FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERP.Utilities", "Utilities\ERP.Utilities.csproj", "{5C522473-66EA-4305-8EE2-15FDE3C99C66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "..\Web\Web.csproj", "{E94E4253-B399-4B8A-8197-AFDFDD75DFA8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8FA3A21E-77D8-4D03-8477-BA7A008EE7F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FA3A21E-77D8-4D03-8477-BA7A008EE7F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FA3A21E-77D8-4D03-8477-BA7A008EE7F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FA3A21E-77D8-4D03-8477-BA7A008EE7F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{692B00C4-DB92-44F6-A3FA-D33D4ED335FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{692B00C4-DB92-44F6-A3FA-D33D4ED335FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{692B00C4-DB92-44F6-A3FA-D33D4ED335FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{692B00C4-DB92-44F6-A3FA-D33D4ED335FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C522473-66EA-4305-8EE2-15FDE3C99C66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C522473-66EA-4305-8EE2-15FDE3C99C66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C522473-66EA-4305-8EE2-15FDE3C99C66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C522473-66EA-4305-8EE2-15FDE3C99C66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E94E4253-B399-4B8A-8197-AFDFDD75DFA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E94E4253-B399-4B8A-8197-AFDFDD75DFA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E94E4253-B399-4B8A-8197-AFDFDD75DFA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E94E4253-B399-4B8A-8197-AFDFDD75DFA8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B3645D2B-57B7-40F9-862C-D5614CBD6025} = {509E992C-4A97-4829-8801-C275B4E4BFCC}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3E41D6F1-CF3E-41E7-82B8-A2A0B9618579}
+	EndGlobalSection
+EndGlobal

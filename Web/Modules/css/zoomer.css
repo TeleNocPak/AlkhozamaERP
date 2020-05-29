@@ -1,0 +1,6 @@
+
+ul.thumb {float: left;list-style: none;margin: 0; padding: 10px;width: 800px;}
+ul.thumb li {margin: 0; padding: 5px;float: left;position: relative;}
+ul.thumb li img {padding: 5px;position: absolute;left: 0; top: 0;-ms-interpolation-mode: bicubic; }
+ul.thumb li img.hover {margin-top:15px;background:url(../images/thumb_bg.png) no-repeat center center;border: none;}
+.title{position:absolute;margin:0;font-weight:900;background:url(../img/blue.png)  repeat-x center center;padding:17px 0 0 0;text-align:center; color: #fff; }

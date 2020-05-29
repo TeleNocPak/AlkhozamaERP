@@ -1,0 +1,270 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.Master.cs"
+    Inherits="ERPWeb.MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>ERP Application</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <%--<link rel="stylesheet" type="text/css" href="../jqtransformplugin/jqtransform.css" />--%>
+    <style type="text/css">
+        .IE8Fix
+        {
+            z-index: 100;
+        }
+    </style>
+    <script type="text/javascript"><!--
+        function hov(loc, cls) {
+            if (loc.className)
+                loc.className = cls;
+        }
+//--></script>
+</head>
+<body onload="window.history.forward();">
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    <div class="home_wrap">
+        <!-- start header section -->
+        <div class="home_header">
+            <div class="home_logo">
+                <img src="../img/BrowserPreview_02.png" alt="Alkhozama" />
+            </div>
+            <div class="home_Welcome">
+                <strong>COMPANY : </strong>
+                <asp:Literal ID="ltrCompanyName" runat="server"></asp:Literal>
+                &nbsp;&nbsp; <strong>BRANCH : </strong>
+                <asp:Literal ID="ltrBranchName" runat="server"></asp:Literal>
+<%--                &nbsp;&nbsp; <strong>LOCATION : </strong>
+                <asp:Literal ID="ltrLocationName" runat="server"></asp:Literal>--%>
+                <br />
+                <strong>USER : </strong>
+                <asp:Literal ID="ltrUserName" runat="server"></asp:Literal>
+            </div>
+        </div>
+        <!-- end header section -->
+        <!-- start left col -->
+        <div class="whitebg">
+            <%--<div class="left_col">
+                <div class="left_col_menus_wrap">
+                    <ul>
+                        <li class="left_col_menus_humonresource_ico"><a href="../DashBoard/AdminDashBoard.aspx">Home</a></li>
+                        <li class="left_col_menus_admin_ico"><a href="../Setups/SetupsMenu.aspx">Administration</a></li>
+                        <li class="left_col_menus_purchaseimport_ico"><a href="../Imports/ImportMenu.aspx">Purchase/Import</a></li>
+                        <li class="left_col_menus_sales_ico"><a href="#">Sales</a></li>
+                        <li class="left_col_menus_finance_ico"><a href="../Accounts/AccountMenu.aspx">Financial</a></li>
+                        <li class="left_col_menus_inventory_ico"><a href="#">Inventory</a></li>
+                        <li class="left_col_menus_humonresource_ico"><a href="#">Human Resource</a></li>
+                        <li class="left_col_menus_logout_ico"><a href="../../Default.aspx">LogOut</a></li>
+                    </ul>
+                </div>
+                <div class="calc">
+                    
+                    <img src="../img/calender.png" alt="calen" /></div>
+            </div>--%>
+            <!-- end left col -->
+            <!-- start rigth col -->
+            <div class="rigth_col">
+                <%-- <div class="rigth_col_main_heading">
+                    <h1>
+                        Welcome to Alkhozama</h1>
+                    <h2>
+                        Enterprise Resource Planing Solution [<em>ERP</em>]</h2>
+                </div>--%>
+                <ul id="nav">
+                    <li class="current homeicon"><a href="../DashBoard/AdminDashBoard.aspx">Home</a>
+                    </li>
+                    <li class="left_col_menus_admin_ico"><a href="../Setups/SetupsMenu.aspx">Administration</a>
+                        
+                        <ul>
+                            
+                            <li class="nestingmenus"><a href="../Setups/SetupsReportMenu.aspx">Setup Reports</a>
+                                <ul>
+                    <!--D
+                                    <li><a href="../Setups/ReportParameterSetups.aspx?ReportId=101">Users</a></li>
+                                    
+                                    <li><a href="../Setups/ReportParameterSetups.aspx?ReportId=102">Products</a></li>
+                                    <li><a href="../Setups/ReportParameterSetups.aspx?ReportId=103">Product Rate</a></li>
+                                    <li><a href="../Setups/ReportParameterSetups.aspx?ReportId=104">Colors</a></li>
+                                    <li><a href="../Setups/ReportParameterSetups.aspx?ReportId=105">Currency</a></li>
+                                    <li><a href="../Setups/ReportParameterSetups.aspx?ReportId=106">Models</a></li>
+                                    <li><a href="../Setups/ReportParameterSetups.aspx?ReportId=107">Insurance Company</a></li>
+                                    <li><a href="../Setups/ReportParameterSetups.aspx?ReportId=108">Banks</a></li>
+                                    <li><a href="../Setups/ReportParameterSetups.aspx?ReportId=109">Exporters (Vendors)</a></li>
+                                    <li><a href="../Setups/ReportParameterSetups.aspx?ReportId=110">Ports</a></li>
+                                    <li><a href="../Setups/ReportParameterSetups.aspx?ReportId=111">Company</a></li>
+                                    <li><a href="../Setups/ReportParameterSetups.aspx?ReportId=112">Branch</a></li>
+                                    <li><a href="../Setups/ReportParameterSetups.aspx?ReportId=113">Warehouse</a></li>
+                                    <li><a href="../Setups/ReportParameterSetups.aspx?ReportId=114">Location</a></li>
+                                    <li><a href="../Setups/ReportParameterSetups.aspx?ReportId=115">Courier Company</a></li>
+                                    <li><a href="../Setups/ReportParameterSetups.aspx?ReportId=116">Zone</a></li>
+                                    <li><a href="../Setups/ReportParameterSetups.aspx?ReportId=117">Brands</a></li>
+                                    <li><a href="../Setups/ReportParameterSetups.aspx?ReportId=118">City Information</a></li>
+                                    -->
+                                </ul>
+                            </li>
+                            <li class="nestingmenus"><a href="../Setups/SetupsMenu.aspx">Users Management</a>
+                                <ul>
+                                    <li><a href="../Setups/ChangePassword.aspx">Change Password</a></li>
+                                    <li><a href="../Setups/UserMasterList.aspx">User Information</a></li>
+                                    <li><a href="../Setups/UserRolesList.aspx">User Roles</a></li>
+                                </ul>
+                            </li>
+                            <!--D
+                            <li class="nestingmenus"><a href="../Setups/SetupsMenu.aspx">Products Management</a>
+                                <ul>
+                                    <li><a href="../Setups/ProductsList.aspx">Products information</a></li>
+                                    <li><a href="../Setups/ProductRatesList.aspx">Product Rates</a></li>
+                                    <li><a href="../Setups/ColorList.aspx">Colors</a></li>
+                                    <li><a href="../Setups/CurrencyList.aspx">Currency</a></li>
+                                    <li><a href="../Setups/ModelList.aspx">Model No.</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li><a href="../Setups/InsurerList.aspx">Insurance Company</a></li>
+                            <li><a href="../Setups/BankList.aspx">Bank Information</a></li>
+                            <li><a href="../Setups/VendorsList.aspx">Vendors (Exporters)</a></li>
+                            <li><a href="../Setups/PortList.aspx">Port Information</a></li>
+                            <li><a href="../Setups/CompanyList.aspx">Company Information</a></li>
+                            <li><a href="../Setups/BranchList.aspx">Branch Information</a></li>
+                            <li><a href="../Setups/WarehouseList.aspx">Warehouse</a></li>
+                            <li><a href="../Setups/LocationList.aspx">Location</a></li>
+                            <li><a href="../Setups/CourierCompanyList.aspx">Courier Company</a></li>
+                            <li><a href="../Setups/ZoneList.aspx">Zone</a></li>
+                            <li><a href="../Setups/BrandsList.aspx">Brands</a> </li>
+                            <li><a href="../Setups/CityList.aspx">Add City</a> </li>
+                            -->
+                        </ul>
+                    </li>
+                    <!--D<li class="left_col_menus_purchaseimport_ico"><a href="../Imports/ImportMenu.aspx">Purchase</a>-->
+                    <li class="left_col_menus_purchaseimport_ico"><a href="#">Purchase</a><!--A-->
+                       
+                    <ul>
+                    <!--D         
+                            <li class="nestingmenus"><a href="../Imports/ImportReportMenu.aspx">Import Reports</a>
+                                <ul>
+                                    <li><a href="../Imports/ReportParameterImports.aspx?ReportId=107">Purchase Requisition List</a></li>
+                                    <li><a href="../Imports/ReportParameterImports.aspx?ReportId=108">Purchase Requisition Detail</a></li>
+                                    <li><a href="../Imports/ReportParameterImports.aspx?ReportId=102">Purchase Confirmation List</a></li>
+                                    <li><a href="../Imports/ReportParameterImports.aspx?ReportId=103">Purchase Confirmation Detail</a></li>
+                                    <li><a href="../Imports/ReportParameterImports.aspx?ReportId=104">LC Summary Report</a></li>
+                                    <li><a href="../Imports/ReportParameterImports.aspx?ReportId=105">LC Detail Report</a></li>
+                                    <li><a href="../Imports/ReportParameterImports.aspx?ReportId=110">Shipment Summary Report</a></li>
+                                    <li><a href="../Imports/ReportParameterImports.aspx?ReportId=109">Shipment Detail Report</a></li>
+                                </ul>
+                            </li>
+                             
+                            <li><a href="../Imports/OrderRequisitionList.aspx">Purchase Order Requisition</a></li>
+                            <li><a href="../Imports/OrderConfirmationList.aspx">Purchase Order Confirmation</a></li>
+                            <li><a href="../Imports/LetterCreditList.aspx">Letter Credit</a></li>
+                            <li><a href="../Imports/CreditNotesList.aspx">Credit Notes</a></li>
+                            <li><a href="../Imports/PreAlertShipmentList.aspx">Pre Alert Shipment</a></li>
+                            <li><a href="../Imports/BankEndorsementShipmentList.aspx">Bank Endorsement Shipment</a></li>
+                            <li><a href="../Imports/BankEndorsementConfirmedList.aspx">Bank Endorsement Confirmed</a></li>
+                            <li><a href="../Imports/DocumentBankPaymentList.aspx">Documents Bank Payment</a></li>
+                            -->
+                        </ul>
+                    </li>
+                    <!--D<li class="left_col_menus_sales_ico"><a href="../Sales/SalesMenu.aspx">Sales</a>-->
+                    <li class="left_col_menus_sales_ico"><a href="#">Sales</a> <!--A-->
+<%--D                        <ul>
+                            <li class="nestingmenus"><a href="../Sales/SalesReportMenu.aspx">Sale Reports</a>
+                                <ul>
+                                    <li><a href="../Sales/ReportParameterSales.aspx?ReportId=101">Dealer Type</a></li>
+                                    <li><a href="../Sales/ReportParameterSales.aspx?ReportId=102">limits</a></li>
+                                    <li><a href="../Sales/ReportParameterSales.aspx?ReportId=103">Dealer Sign Board</a></li>
+                                    <li><a href="../Sales/ReportParameterSales.aspx?ReportId=104">Supplier Incentive</a></li>
+                                    <li><a href="../Sales/ReportParameterSales.aspx?ReportId=105">Dealers</a></li>
+                                    <li><a href="../Sales/ReportParameterSales.aspx?ReportId=106">Dealer Monthly Target</a></li>
+                                    <li><a href="../Sales/ReportParameterSales.aspx?ReportId=107">Rebate Inspection</a></li>
+                                    <li><a href="../Sales/ReportParameterSales.aspx?ReportId=108">Post Dated Cheque</a></li>
+                                    <li><a href="../Sales/ReportParameterSales.aspx?ReportId=109">Dealer Incentive</a></li>
+                                    <li><a href="../Sales/ReportParameterSales.aspx?ReportId=110">Sales Man Target</a></li>
+                                    <li><a href="../Sales/ReportParameterSales.aspx?ReportId=111">Dealer Online Transaction</a></li>
+                                    <li><a href="../Sales/ReportParameterSales.aspx?ReportId=112">Sales Order Invoice Wise</a></li>
+                                    <li><a href="../Sales/ReportParameterSales.aspx?ReportId=115">Sales Order Detail</a></li>
+                                    <li><a href="../Sales/ReportParameterSales.aspx?ReportId=113">Sales Invoice Wise</a></li>
+                                    <li><a href="../Sales/ReportParameterSales.aspx?ReportId=116">Sales Invoice Detail</a></li>
+                                    <li><a href="../Sales/ReportParameterSales.aspx?ReportId=114">Sales Return Wise</a></li>
+                                    <li><a href="../Sales/ReportParameterSales.aspx?ReportId=117">Sales Return Detail</a></li>
+                                </ul>
+                            </li>
+                            <li class="nestingmenus"><a href="../Sales/SalesMenu.aspx">Dealer Management</a>
+                                <ul>
+                                    <li><a href="../Sales/DealerList.aspx">Dealer Information</a></li>
+                                    <li><a href="../Sales/LimitInfoList.aspx">Limit Information</a></li>
+                                    <li><a href="../Sales/DealerTypeList.aspx">Dealer Type</a></li>
+                                    <li><a href="../Sales/DealerSignBoardList.aspx">Dealer Sign Board</a></li>
+                                    <li><a href="../Sales/SupplierIncentiveList.aspx">Supplier Incentive</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="../Sales/StockReceivedNoteList.aspx">Stock Received Notes</a></li>
+                            <li><a href="../Sales/SalesOrderList.aspx">Sales Order</a></li>
+                            <li><a href="../Sales/SalesInvoiceList.aspx">Sales Invoice</a></li>
+                            <li><a href="../Sales/SaleReturnList.aspx">Sales Return</a></li>
+                            <li><a href="../Sales/DealerMonthlyTargetList.aspx">Dealer Monthly Target</a></li>
+                            <li><a href="../Sales/RebateInspectionList.aspx">Dealer Rebate Inspection</a></li>
+                            <li><a href="../Sales/PostDatedChequeList.aspx">Post Dated Cheque</a></li>
+                            <li><a href="../Sales/DealerIncentiveList.aspx">Dealer Incentive</a></li>
+                            <li><a href="../Sales/SalesManTargetList.aspx">Sales Man Target</a></li>
+                            <li><a href="../Sales/OnlineTransactionList.aspx">Dealer Online Transaction</a></li>
+                        </ul>--%>
+                    </li>
+                    <!--D<li class="left_col_menus_inventory_ico"><a href="../Inventory/InventoryMenu.aspx">Inventory</a>-->
+                    <li class="left_col_menus_inventory_ico"><a href="#">Inventory</a><!--A-->
+   <%-- D                    <ul>
+                            <li class="nestingmenus"><a href="../Inventory/InventoryReportMenu.aspx">Inventory Reports</a>
+                                <ul>
+                                    <li><a href="../Inventory/ReportParameterInventory.aspx?ReportId=103">Inventory Report</a></li>
+                                    <li><a href="../Sales/ReportParameterSales.aspx?ReportId=118">IMEI Actual Location</a></li>
+                                    <li><a href="../Inventory/ReportParameterInventory.aspx?ReportId=101">Stock Transfer Summary</a></li>
+                                    <li><a href="../Inventory/ReportParameterInventory.aspx?ReportId=102">Stock Transfer Detail</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="../Inventory/ProductOpeningBalanceList.aspx">Add Products Opening Balance</a></li>
+                            <li><a href="../Imports/GoodsReceiptVoucherList.aspx">Goods Received Notes</a></li>
+                            <li><a href="../Imports/PurchaseLocalOrderList.aspx">Purchase Order Local</a></li>
+                            <li><a href="../Inventory/AddIMEINoList.aspx">Add IMEI No.</a></li>
+                            <li><a href="../Inventory/StockReadyForSaleList.aspx">Stock Ready For Sale</a></li>
+                            <li><a href="../Inventory/StockTransferNotesList.aspx">Stock Transfer Notes</a></li>
+                            <li><a href="../Sales/StockReceivedNoteList.aspx">Stock Received Notes</a></li>
+                        </ul>--%>
+                    </li>
+                    <li class="left_col_menus_finance_ico"><a href="../Accounts/AccountMenu.aspx">Financial</a>
+                        <ul>
+                            <li><a href="../Accounts/ChartofAccount.aspx">Chart of Account</a></li>
+                            <li><a href="../Accounts/PaymentVoucherSingleList.aspx">Payment Voucher(Single Entry)</a></li>
+                            <li><a href="../Accounts/ReceiptVoucherSingleList.aspx">Receipt Voucher(Single Entry)</a></li>
+                            <li><a href="../Accounts/VoucherList.aspx">Payment &amp; Receipt Voucher</a></li>
+                            <li><a href="../Accounts/GeneralVoucherList.aspx">Journal Voucher</a></li>
+                            <li><a href="../Accounts/PostDatedChequeReceived.aspx">Post Dated Cheque Received</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="left_col_menus_humonresource_ico"><a href="#">Human Resource</a>
+                       <ul>
+                            <li><a href="../HumanResource/OrganizationChart.aspx">Organization Chart</a></li>
+                            <li><a href="../HumanResource/EventCalander.aspx">Event Calander</a></li>
+                            <li><a href="../HumanResource/UserChat.aspx">User Chat</a></li>
+                       </ul>
+                    </li>
+                    
+                    <li class="left_col_menus_logout_ico"><a href="../../Logout.aspx">Log Out</a></li>
+                </ul>
+                <div class="main_body_wrap">
+                    <!-- start home flow chart tabs -->
+                    <asp:ContentPlaceHolder ID="MainContentPlaceHolder" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <!-- end home flow chart tabs -->
+            </div>
+            <!-- end rigth col -->
+        </div>
+    </div>
+    <div class="powered_by">
+        Powered by TeleNoc
+    </div>
+    <!-- End Home Page -->
+    </form>
+</body>
+</html>

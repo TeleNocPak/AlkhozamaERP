@@ -1,0 +1,885 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E94E4253-B399-4B8A-8197-AFDFDD75DFA8}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Web</RootNamespace>
+    <AssemblyName>Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.0.20820.33243, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=12.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=12.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Web, Version=12.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\CrystalDecisions.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=4.1.2.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Common\SharedBin\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\ERP\packages\Microsoft.AspNet.SignalR.Core.1.0.0-rc1\lib\net40\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\ERP\Utilities\bin\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\ERP\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SignalRChat">
+      <HintPath>..\ERP\Utilities\bin\SignalRChat.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\AjaxControlToolkit.dll" />
+    <Content Include="bin\Interop.Microsoft.Office.Core.dll" />
+    <Content Include="bin\Interop.Microsoft.Office.Interop.Excel.dll" />
+    <Content Include="bin\Interop.VBIDE.dll" />
+    <Content Include="bin\itextsharp.dll" />
+    <Content Include="bin\Microsoft.Office.Interop.Excel.dll" />
+    <Content Include="bin\Microsoft.Vbe.Interop.dll" />
+    <Content Include="bin\Microsoft.Web.Preview.dll" />
+    <Content Include="bin\office.dll" />
+    <Content Include="bin\Web.pdb" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Logout.aspx" />
+    <Content Include="Modules\Accounts\GeneralVoucher.aspx" />
+    <Content Include="Modules\Accounts\GeneralVoucherList.aspx" />
+    <Content Include="Modules\Accounts\PaymentVoucherSingle.aspx" />
+    <Content Include="Modules\Accounts\PaymentVoucherSingleList.aspx" />
+    <Content Include="Modules\Accounts\PostDatedChequeReceived.aspx" />
+    <Content Include="Modules\Accounts\ReceiptVoucherSingle.aspx" />
+    <Content Include="Modules\Accounts\ReceiptVoucherSingleList.aspx" />
+    <Content Include="Modules\Accounts\Voucher.aspx" />
+    <Content Include="Modules\Accounts\VoucherList.aspx" />
+    <Content Include="Modules\HumanResource\EmpPics\1.jpg" />
+    <Content Include="Modules\HumanResource\EmpPics\10299.jpg" />
+    <Content Include="Modules\HumanResource\EmpPics\10304.jpg" />
+    <Content Include="Modules\HumanResource\EmpPics\10305.jpg" />
+    <Content Include="Modules\HumanResource\EmpPics\10306.jpg" />
+    <Content Include="Modules\HumanResource\EmpPics\10309.jpg" />
+    <Content Include="Modules\HumanResource\EmpPics\10310.jpg" />
+    <Content Include="Modules\HumanResource\EmpPics\10311.jpg" />
+    <Content Include="Modules\HumanResource\EmpPics\10324.jpg" />
+    <Content Include="Modules\HumanResource\EmpPics\10329.jpg" />
+    <Content Include="Modules\HumanResource\EmpPics\10346.jpg" />
+    <Content Include="Modules\HumanResource\EmpPics\10351.jpg" />
+    <Content Include="Modules\HumanResource\EmpPics\10352.jpg" />
+    <Content Include="Modules\HumanResource\EmpPics\112.jpg" />
+    <Content Include="Modules\HumanResource\EmpPics\116.jpg" />
+    <Content Include="Modules\HumanResource\EmpPics\12.jpg" />
+    <Content Include="Modules\HumanResource\EmpPics\158.jpg" />
+    <Content Include="Modules\HumanResource\EmpPics\2.jpg" />
+    <Content Include="Modules\HumanResource\EmpPics\216.jpg" />
+    <Content Include="Modules\HumanResource\EmpPics\219.jpg" />
+    <Content Include="Modules\HumanResource\EmpPics\224.jpg" />
+    <Content Include="Modules\HumanResource\EmpPics\248.jpg" />
+    <Content Include="Modules\HumanResource\EmpPics\264.jpg" />
+    <Content Include="Modules\HumanResource\EmpPics\269.jpg" />
+    <Content Include="Modules\HumanResource\EmpPics\40.jpg" />
+    <Content Include="Modules\HumanResource\EmpPics\49.jpg" />
+    <Content Include="Modules\HumanResource\EmpPics\51.jpg" />
+    <Content Include="Modules\HumanResource\EmpPics\6.jpg" />
+    <Content Include="Modules\HumanResource\EmpPics\80.jpg" />
+    <Content Include="Modules\HumanResource\EmpPics\84.jpg" />
+    <Content Include="Modules\HumanResource\EventCalander.aspx" />
+    <Content Include="Modules\HumanResource\images\DP\Altaf2015-12-tekla.com-new-images-09.jpg" />
+    <Content Include="Modules\HumanResource\images\DP\AltafAjpg.jpg" />
+    <Content Include="Modules\HumanResource\images\DP\AltafHBD-All-Uttari01.jpg" />
+    <Content Include="Modules\HumanResource\images\DP\dummy.png" />
+    <Content Include="Modules\HumanResource\images\dummy.png" />
+    <Content Include="Modules\HumanResource\js\MindFusion.Scheduling.js" />
+    <Content Include="Modules\HumanResource\js\MyFirstSchedule.js" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="Modules\HumanResource\OrganizationChart.aspx" />
+    <Content Include="Modules\HumanResource\js\themes\blue.css" />
+    <Content Include="Modules\HumanResource\js\themes\business.css" />
+    <Content Include="Modules\HumanResource\js\themes\custom.css" />
+    <Content Include="Modules\HumanResource\js\themes\first-theme.css" />
+    <Content Include="Modules\HumanResource\js\themes\forest.css" />
+    <Content Include="Modules\HumanResource\js\themes\gray.css" />
+    <Content Include="Modules\HumanResource\js\themes\green.css" />
+    <Content Include="Modules\HumanResource\js\themes\icons.png" />
+    <Content Include="Modules\HumanResource\js\themes\light.css" />
+    <Content Include="Modules\HumanResource\js\themes\peach.css" />
+    <Content Include="Modules\HumanResource\js\themes\standard.css" />
+    <Content Include="Modules\img\blackAddIMEINo.png" />
+    <Content Include="Modules\img\blackIMEIActualLocation.png" />
+    <Content Include="Modules\img\blackInventoryReport.png" />
+    <Content Include="Modules\img\blackStockTransferDetail.png" />
+    <Content Include="Modules\img\blackStockTransferSummary.png" />
+    <Content Include="Modules\img\BrandsBlack.png" />
+    <Content Include="Modules\img\Brandsgreen.png" />
+    <Content Include="Modules\img\Cityinfoblack.png" />
+    <Content Include="Modules\img\Cityinfogreen.png" />
+    <Content Include="Modules\img\close.png" />
+    <Content Include="Modules\img\CourierCompanyblack.png" />
+    <Content Include="Modules\img\CourierCompanygreen.png" />
+    <Content Include="Modules\img\customergreen.png" />
+    <Content Include="Modules\img\dealerblack.png" />
+    <Content Include="Modules\img\dealergreen.png" />
+    <Content Include="Modules\img\dealerIncentiveblack.png" />
+    <Content Include="Modules\img\dealerIncentivegreen.png" />
+    <Content Include="Modules\img\dealermonthlytargetblack.png" />
+    <Content Include="Modules\img\dealermonthlytargetgreen.png" />
+    <Content Include="Modules\img\DealerSignBoardblack.png" />
+    <Content Include="Modules\img\DealerSignBoardgreen.png" />
+    <Content Include="Modules\img\DealerTypeblack.png" />
+    <Content Include="Modules\img\DealerTypegreen.png" />
+    <Content Include="Modules\img\emailtemplatesblack.png" />
+    <Content Include="Modules\img\emailtemplatesgreen.png" />
+    <Content Include="Modules\img\greenAddIMEINo.png" />
+    <Content Include="Modules\img\greenIMEIActualLocation.png" />
+    <Content Include="Modules\img\greenInventoryReport.png" />
+    <Content Include="Modules\img\greenStockTransferDetail.png" />
+    <Content Include="Modules\img\greenStockTransferSummary.png" />
+    <Content Include="Modules\img\ico\arrow.png" />
+    <Content Include="Modules\img\ico\arrow_white.png" />
+    <Content Include="Modules\img\ico\Home-icon.png" />
+    <Content Include="Modules\img\ImportReportblack.png" />
+    <Content Include="Modules\img\ImportReportgreen.png" />
+    <Content Include="Modules\img\JournalVoucherblack.png" />
+    <Content Include="Modules\img\JournalVouchergreen.png" />
+    <Content Include="Modules\img\LCDetailgreen.gif" />
+    <Content Include="Modules\img\LCSummarygreen.gif" />
+    <Content Include="Modules\img\limitblack.png" />
+    <Content Include="Modules\img\limitgreen.png" />
+    <Content Include="Modules\img\OnlineTransactionblack.png" />
+    <Content Include="Modules\img\OnlineTransactiongreen.png" />
+    <Content Include="Modules\img\postdatedchequeblack.png" />
+    <Content Include="Modules\img\postdatedchequegreen.png" />
+    <Content Include="Modules\img\postdatedchequerecblack.png" />
+    <Content Include="Modules\img\postdatedchequerecgreen.png" />
+    <Content Include="Modules\img\ProductOpeningblack.png" />
+    <Content Include="Modules\img\ProductOpeninggreen.png" />
+    <Content Include="Modules\img\ProformaInvoiceDetailgreen.gif" />
+    <Content Include="Modules\img\ProformaInvoiceSummarygreen.gif" />
+    <Content Include="Modules\img\PurchaseOrderLocalblack.png" />
+    <Content Include="Modules\img\PurchaseOrderLocalgreen.png" />
+    <Content Include="Modules\img\rebateinspectionblack.png" />
+    <Content Include="Modules\img\rebateinspectiongreen.png" />
+    <Content Include="Modules\img\saleInvoiceblack.png" />
+    <Content Include="Modules\img\saleInvoicegreen.png" />
+    <Content Include="Modules\img\saleManTargetblack.png" />
+    <Content Include="Modules\img\saleManTargetgreen.png" />
+    <Content Include="Modules\img\salesorderblack.png" />
+    <Content Include="Modules\img\salesordergreen.png" />
+    <Content Include="Modules\img\SalesReturnblack.png" />
+    <Content Include="Modules\img\SalesReturngreen.png" />
+    <Content Include="Modules\img\Stockreadyforsaleblack.png" />
+    <Content Include="Modules\img\Stockreadyforsalegreen.png" />
+    <Content Include="Modules\img\StockReceivedNotesblack.png" />
+    <Content Include="Modules\img\StockReceivedNotesgreen.png" />
+    <Content Include="Modules\img\StockTransferNotesblack.png" />
+    <Content Include="Modules\img\StockTransferNotesgreen.png" />
+    <Content Include="Modules\img\SupplierIncentiveblack.png" />
+    <Content Include="Modules\img\SupplierIncentivegreen.png" />
+    <Content Include="Modules\img\VoucherBankCashblack.png" />
+    <Content Include="Modules\img\VoucherBankCashgreen.png" />
+    <Content Include="Modules\img\warehouseblack.png" />
+    <Content Include="Modules\img\warehousegreen.png" />
+    <Content Include="Modules\img\zoneblack.png" />
+    <Content Include="Modules\img\zonegreen.png" />
+    <Content Include="Modules\Sales\SalesMenu.aspx" />
+    <Content Include="Modules\Setups\Country.aspx" />
+    <Content Include="Modules\Setups\CountryList.aspx" />
+    <Content Include="Modules\Setups\ReportParameterSetups.aspx" />
+    <Content Include="Modules\Setups\SetupsReportMenu.aspx" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="packages.config" />
+    <None Include="Scripts\jquery-3.2.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.2.1.js" />
+    <Content Include="Scripts\jquery-3.2.1.min.js" />
+    <Content Include="Scripts\jquery-3.2.1.slim.js" />
+    <Content Include="Scripts\jquery-3.2.1.slim.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Scripts\jquery-3.2.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.2.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChangeLoginPassword.aspx.cs">
+      <DependentUpon>ChangeLoginPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangeLoginPassword.aspx.designer.cs">
+      <DependentUpon>ChangeLoginPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DateDiff.cs" />
+    <Compile Include="Default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Accounts\AccountMenu.aspx.cs">
+      <DependentUpon>AccountMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Accounts\AccountMenu.aspx.designer.cs">
+      <DependentUpon>AccountMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Accounts\ChartofAccount.aspx.cs">
+      <DependentUpon>ChartofAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Accounts\ChartofAccount.aspx.designer.cs">
+      <DependentUpon>ChartofAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Accounts\GeneralVoucher.aspx.cs">
+      <DependentUpon>GeneralVoucher.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Accounts\GeneralVoucher.aspx.designer.cs">
+      <DependentUpon>GeneralVoucher.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Accounts\GeneralVoucherList.aspx.cs">
+      <DependentUpon>GeneralVoucherList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Accounts\GeneralVoucherList.aspx.designer.cs">
+      <DependentUpon>GeneralVoucherList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Accounts\PaymentVoucherSingle.aspx.cs">
+      <DependentUpon>PaymentVoucherSingle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Accounts\PaymentVoucherSingle.aspx.designer.cs">
+      <DependentUpon>PaymentVoucherSingle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Accounts\PaymentVoucherSingleList.aspx.cs">
+      <DependentUpon>PaymentVoucherSingleList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Accounts\PaymentVoucherSingleList.aspx.designer.cs">
+      <DependentUpon>PaymentVoucherSingleList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Accounts\PostDatedChequeReceived.aspx.cs">
+      <DependentUpon>PostDatedChequeReceived.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Accounts\PostDatedChequeReceived.aspx.designer.cs">
+      <DependentUpon>PostDatedChequeReceived.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Accounts\ReceiptVoucherSingle.aspx.cs">
+      <DependentUpon>ReceiptVoucherSingle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Accounts\ReceiptVoucherSingle.aspx.designer.cs">
+      <DependentUpon>ReceiptVoucherSingle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Accounts\ReceiptVoucherSingleList.aspx.cs">
+      <DependentUpon>ReceiptVoucherSingleList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Accounts\ReceiptVoucherSingleList.aspx.designer.cs">
+      <DependentUpon>ReceiptVoucherSingleList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Accounts\Voucher.aspx.cs">
+      <DependentUpon>Voucher.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Accounts\Voucher.aspx.designer.cs">
+      <DependentUpon>Voucher.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Accounts\VoucherList.aspx.cs">
+      <DependentUpon>VoucherList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Accounts\VoucherList.aspx.designer.cs">
+      <DependentUpon>VoucherList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HumanResource\EventCalander.aspx.cs">
+      <DependentUpon>EventCalander.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\HumanResource\EventCalander.aspx.designer.cs">
+      <DependentUpon>EventCalander.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\HumanResource\OrganizationChart.aspx.cs">
+      <DependentUpon>OrganizationChart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\HumanResource\OrganizationChart.aspx.designer.cs">
+      <DependentUpon>OrganizationChart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\MasterPage.Master.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\MasterPage.Master.designer.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\DashBoard\AdminDashBoard.aspx.cs">
+      <DependentUpon>AdminDashBoard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\DashBoard\AdminDashBoard.aspx.designer.cs">
+      <DependentUpon>AdminDashBoard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Sales\SalesMenu.aspx.cs">
+      <DependentUpon>SalesMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Sales\SalesMenu.aspx.designer.cs">
+      <DependentUpon>SalesMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Setups\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Setups\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Setups\Company.aspx.cs">
+      <DependentUpon>Company.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Setups\Company.aspx.designer.cs">
+      <DependentUpon>Company.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Setups\CompanyList.aspx.cs">
+      <DependentUpon>CompanyList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Setups\CompanyList.aspx.designer.cs">
+      <DependentUpon>CompanyList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Setups\Country.aspx.cs">
+      <DependentUpon>Country.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Setups\Country.aspx.designer.cs">
+      <DependentUpon>Country.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Setups\CountryList.aspx.cs">
+      <DependentUpon>CountryList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Setups\CountryList.aspx.designer.cs">
+      <DependentUpon>CountryList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Setups\Currency.aspx.cs">
+      <DependentUpon>Currency.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Setups\Currency.aspx.designer.cs">
+      <DependentUpon>Currency.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Setups\CurrencyList.aspx.cs">
+      <DependentUpon>CurrencyList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Setups\CurrencyList.aspx.designer.cs">
+      <DependentUpon>CurrencyList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Setups\Location.aspx.cs">
+      <DependentUpon>Location.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Setups\Location.aspx.designer.cs">
+      <DependentUpon>Location.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Setups\LocationList.aspx.cs">
+      <DependentUpon>LocationList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Setups\LocationList.aspx.designer.cs">
+      <DependentUpon>LocationList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Setups\ReportParameterSetups.aspx.cs">
+      <DependentUpon>ReportParameterSetups.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Setups\ReportParameterSetups.aspx.designer.cs">
+      <DependentUpon>ReportParameterSetups.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Setups\SetupsMenu.aspx.cs">
+      <DependentUpon>SetupsMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Setups\SetupsMenu.aspx.designer.cs">
+      <DependentUpon>SetupsMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Setups\SetupsReportMenu.aspx.cs">
+      <DependentUpon>SetupsReportMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Setups\SetupsReportMenu.aspx.designer.cs">
+      <DependentUpon>SetupsReportMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Setups\SetupsReportSchema.cs">
+      <DependentUpon>SetupsReportSchema.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Setups\SetupsReportSchema1.Designer.cs" />
+    <Compile Include="Modules\Setups\UserMaster.aspx.cs">
+      <DependentUpon>UserMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Setups\UserMaster.aspx.designer.cs">
+      <DependentUpon>UserMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Setups\UserMasterList.aspx.cs">
+      <DependentUpon>UserMasterList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Setups\UserMasterList.aspx.designer.cs">
+      <DependentUpon>UserMasterList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Setups\UserRolesList.aspx.cs">
+      <DependentUpon>UserRolesList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Setups\UserRolesList.aspx.designer.cs">
+      <DependentUpon>UserRolesList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Setups\UserRoles.aspx.cs">
+      <DependentUpon>UserRoles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Setups\UserRoles.aspx.designer.cs">
+      <DependentUpon>UserRoles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\ERP.BusinessRules.dll" />
+    <Content Include="bin\ERP.BusinessRules.pdb" />
+    <Content Include="bin\ERP.DAL.dll" />
+    <Content Include="bin\ERP.DAL.pdb" />
+    <Content Include="bin\ERP.Utilities.dll" />
+    <Content Include="bin\ERP.Utilities.pdb" />
+    <Content Include="ChangeLoginPassword.aspx" />
+    <Content Include="Modules\Accounts\AccountMenu.aspx" />
+    <Content Include="Modules\Accounts\ChartofAccount.aspx" />
+    <Content Include="Modules\img\ajax-loader.gif" />
+    <Content Include="Modules\img\BankEndorsementblack.png" />
+    <Content Include="Modules\img\BankEndorsementConfirmedBlack.png" />
+    <Content Include="Modules\img\BankEndorsementConfirmedgreen.png" />
+    <Content Include="Modules\img\BankEndorsementgreen.png" />
+    <Content Include="Modules\img\BrowserPreview_02_Tempasd.png" />
+    <Content Include="Modules\img\COAblack.png" />
+    <Content Include="Modules\img\COAgreen.png" />
+    <Content Include="Modules\img\Comapnyblack.png" />
+    <Content Include="Modules\img\Companygreen.png" />
+    <Content Include="Modules\img\DocumentBankPaymentblack.png" />
+    <Content Include="Modules\img\DocumentBankPaymentgreen.png" />
+    <Content Include="Modules\img\EditCOA.png" />
+    <Content Include="Modules\img\folder.png" />
+    <Content Include="Modules\img\loading_2.gif" />
+    <Content Include="Modules\img\loading_3.gif" />
+    <Content Include="Modules\img\LocationCOAblack.png" />
+    <Content Include="Modules\img\LocationCOAgreen.png" />
+    <Content Include="Modules\img\squareblue.gif" />
+    <Content Include="Modules\img\squaregreen.gif" />
+    <Content Include="Modules\css\main.css" />
+    <Content Include="Modules\css\zoomer.css" />
+    <Content Include="formValidator\jquery.validationEngine.js" />
+    <Content Include="formValidator\validationEngine.jquery.css" />
+    <Content Include="Modules\img\banksblack.png" />
+    <Content Include="Modules\img\banksgreen.png" />
+    <Content Include="Modules\img\bg.png" />
+    <Content Include="Modules\img\bg_header.png" />
+    <Content Include="Modules\img\bg_ip.png" />
+    <Content Include="Modules\img\bg_login_window.png" />
+    <Content Include="Modules\img\bg_modal_window.png" />
+    <Content Include="Modules\img\bg_switch.png" />
+    <Content Include="Modules\img\bg_window_header.png" />
+    <Content Include="Modules\img\blue.png" />
+    <Content Include="Modules\img\bodybg.jpg" />
+    <Content Include="Modules\img\branchblack.png" />
+    <Content Include="Modules\img\branchgreen.png" />
+    <Content Include="Modules\img\BrowserPreview_03_hover.png" />
+    <Content Include="Modules\img\BrowserPreview_06.png" />
+    <Content Include="Modules\img\btnBanks.jpg" />
+    <Content Include="Modules\img\btnBranch.jpg" />
+    <Content Include="Modules\img\btnChangePassword.jpg" />
+    <Content Include="Modules\img\btnColors.jpg" />
+    <Content Include="Modules\img\btnCurrency.jpg" />
+    <Content Include="Modules\img\btnExporters.jpg" />
+    <Content Include="Modules\img\btnGoodsReceiptVoucher.jpg" />
+    <Content Include="Modules\img\btnInsurer.jpg" />
+    <Content Include="Modules\img\btnLetterCredit.jpg" />
+    <Content Include="Modules\img\btnModelNo.jpg" />
+    <Content Include="Modules\img\btnOrderConfirmation.jpg" />
+    <Content Include="Modules\img\btnOrderRequisition.jpg" />
+    <Content Include="Modules\img\btnProductRate.jpg" />
+    <Content Include="Modules\img\btnProducts.jpg" />
+    <Content Include="Modules\img\btnUser.jpg" />
+    <Content Include="Modules\img\btnUserRole.jpg" />
+    <Content Include="Modules\img\bt_ga.png" />
+    <Content Include="Modules\img\bt_gh.png" />
+    <Content Include="Modules\img\Calendar.png" />
+    <Content Include="Modules\img\calender.png" />
+    <Content Include="Modules\img\changeppswdblack.png" />
+    <Content Include="Modules\img\changeppswdgreen.png" />
+    <Content Include="Modules\img\colorsblack.png" />
+    <Content Include="Modules\img\colorsgreen.png" />
+    <Content Include="Modules\img\CreditNotesblack.png" />
+    <Content Include="Modules\img\CreditNotesgreen.png" />
+    <Content Include="Modules\img\currencyblack.png" />
+    <Content Include="Modules\img\currencygreen.png" />
+    <Content Include="Modules\img\exportersblack.png" />
+    <Content Include="Modules\img\exportersgreen.png" />
+    <Content Include="Modules\img\footer_login_window.png" />
+    <Content Include="Modules\img\goodsreceblack.png" />
+    <Content Include="Modules\img\goodsrecegreen.png" />
+    <Content Include="Modules\img\graph.jpg" />
+    <Content Include="Modules\img\home_tabs_BrowserPreview_03.png" />
+    <Content Include="Modules\img\home_tabs_BrowserPreview_05.png" />
+    <Content Include="Modules\img\home_tabs_BrowserPreview_05_hover.png" />
+    <Content Include="Modules\img\home_tabs_BrowserPreview_07.png" />
+    <Content Include="Modules\img\home_tabs_BrowserPreview_07_hover.png" />
+    <Content Include="Modules\img\home_tabs_BrowserPreview_10.png" />
+    <Content Include="Modules\img\home_tabs_BrowserPreview_10_hover.png" />
+    <Content Include="Modules\img\home_tabs_BrowserPreview_13.png" />
+    <Content Include="Modules\img\home_tabs_BrowserPreview_13_hover.png" />
+    <Content Include="Modules\img\home_tabs_BrowserPreview_15.png" />
+    <Content Include="Modules\img\home_tabs_BrowserPreview_15_hover.png" />
+    <Content Include="Modules\img\home_tabs_BrowserPreview_19.png" />
+    <Content Include="Modules\img\home_tabs_BrowserPreview_19_hover.png" />
+    <Content Include="Modules\img\icon_delete.png" />
+    <Content Include="Modules\img\icon_edit.png" />
+    <Content Include="Modules\img\ico\administration.png" />
+    <Content Include="Modules\img\ico\financial.png" />
+    <Content Include="Modules\img\ico\humonresource.png" />
+    <Content Include="Modules\img\ico\inventory.png" />
+    <Content Include="Modules\img\ico\logout.png" />
+    <Content Include="Modules\img\ico\purchaseimport.png" />
+    <Content Include="Modules\img\ico\sales.png" />
+    <Content Include="Modules\img\insublack.png" />
+    <Content Include="Modules\img\insugreen.png" />
+    <Content Include="Modules\img\lettercreditblack.png" />
+    <Content Include="Modules\img\lettercreditgreen.png" />
+    <Content Include="Modules\img\login1bg.png" />
+    <Content Include="Modules\img\loginbutton.png" />
+    <Content Include="Modules\img\minus-2.jpg" />
+    <Content Include="Modules\img\minus.png" />
+    <Content Include="Modules\img\modelnumblack.png" />
+    <Content Include="Modules\img\modelnumgreen.png" />
+    <Content Include="Modules\img\mousehoverleftmenubg.png" />
+    <Content Include="Modules\img\deleted.png" />
+    <Content Include="Modules\img\notifications\error.png" />
+    <Content Include="Modules\img\notifications\info.png" />
+    <Content Include="Modules\img\notifications\searchico.png" />
+    <Content Include="Modules\img\notifications\success.png" />
+    <Content Include="Modules\img\notifications\tip.png" />
+    <Content Include="Modules\img\notifications\warning.png" />
+    <Content Include="Modules\img\orderconfirblack.png" />
+    <Content Include="Modules\img\orderconfirgreen.png" />
+    <Content Include="Modules\img\orderreqblack.png" />
+    <Content Include="Modules\img\orderreqgreen.png" />
+    <Content Include="Modules\img\plus-2.jpg" />
+    <Content Include="Modules\img\plus.png" />
+    <Content Include="Modules\img\portinfoblack.png" />
+    <Content Include="Modules\img\portinfogreen.png" />
+    <Content Include="Modules\img\prealrertshipblack.png" />
+    <Content Include="Modules\img\prealrertshipgreen.png" />
+    <Content Include="Modules\img\productrateblack.png" />
+    <Content Include="Modules\img\productrategreen.png" />
+    <Content Include="Modules\img\productsblack.png" />
+    <Content Include="Modules\img\productsgreen.png" />
+    <Content Include="Modules\img\reflect.png" />
+    <Content Include="Modules\img\top_login_window.png" />
+    <Content Include="jqtransformplugin\img\btn_left.gif" />
+    <Content Include="jqtransformplugin\img\btn_right.gif" />
+    <Content Include="jqtransformplugin\img\checkbox.gif" />
+    <Content Include="jqtransformplugin\img\input\input_left-focus.gif" />
+    <Content Include="jqtransformplugin\img\input\input_left-hover.gif" />
+    <Content Include="jqtransformplugin\img\input\input_left.gif" />
+    <Content Include="jqtransformplugin\img\input\input_right-focus.gif" />
+    <Content Include="jqtransformplugin\img\input\input_right-hover.gif" />
+    <Content Include="jqtransformplugin\img\input\input_right.gif" />
+    <Content Include="jqtransformplugin\img\input\input_text_left.gif" />
+    <Content Include="jqtransformplugin\img\input\input_text_left.png" />
+    <Content Include="jqtransformplugin\img\input\input_text_right.gif" />
+    <Content Include="jqtransformplugin\img\input\input_text_right.png" />
+    <Content Include="jqtransformplugin\img\radio.gif" />
+    <Content Include="jqtransformplugin\img\select_left.gif" />
+    <Content Include="jqtransformplugin\img\select_right.gif" />
+    <Content Include="jqtransformplugin\img\textarea\notneeded\textarea-bl-focus.gif" />
+    <Content Include="jqtransformplugin\img\textarea\notneeded\textarea-bl-hover.gif" />
+    <Content Include="jqtransformplugin\img\textarea\notneeded\textarea-bl.gif" />
+    <Content Include="jqtransformplugin\img\textarea\notneeded\textarea-bm-focus.gif" />
+    <Content Include="jqtransformplugin\img\textarea\notneeded\textarea-bm-hover.gif" />
+    <Content Include="jqtransformplugin\img\textarea\notneeded\textarea-bm.gif" />
+    <Content Include="jqtransformplugin\img\textarea\notneeded\textarea-br-focus.gif" />
+    <Content Include="jqtransformplugin\img\textarea\notneeded\textarea-br-hover.gif" />
+    <Content Include="jqtransformplugin\img\textarea\notneeded\textarea-br.gif" />
+    <Content Include="jqtransformplugin\img\textarea\notneeded\textarea-ml-focus.gif" />
+    <Content Include="jqtransformplugin\img\textarea\notneeded\textarea-ml-hover.gif" />
+    <Content Include="jqtransformplugin\img\textarea\notneeded\textarea-ml.gif" />
+    <Content Include="jqtransformplugin\img\textarea\notneeded\textarea-mm-focus.gif" />
+    <Content Include="jqtransformplugin\img\textarea\notneeded\textarea-mm-hover.gif" />
+    <Content Include="jqtransformplugin\img\textarea\notneeded\textarea-mm.gif" />
+    <Content Include="jqtransformplugin\img\textarea\notneeded\textarea-mr-focus.gif" />
+    <Content Include="jqtransformplugin\img\textarea\notneeded\textarea-mr-hover.gif" />
+    <Content Include="jqtransformplugin\img\textarea\notneeded\textarea-mr.gif" />
+    <Content Include="jqtransformplugin\img\textarea\notneeded\textarea-tl-focus.gif" />
+    <Content Include="jqtransformplugin\img\textarea\notneeded\textarea-tl-hover.gif" />
+    <Content Include="jqtransformplugin\img\textarea\notneeded\textarea-tl.gif" />
+    <Content Include="jqtransformplugin\img\textarea\notneeded\textarea-tm-focus.gif" />
+    <Content Include="jqtransformplugin\img\textarea\notneeded\textarea-tm-hover.gif" />
+    <Content Include="jqtransformplugin\img\textarea\notneeded\textarea-tm.gif" />
+    <Content Include="jqtransformplugin\img\textarea\notneeded\textarea-tr-focus.gif" />
+    <Content Include="jqtransformplugin\img\textarea\notneeded\textarea-tr-hover.gif" />
+    <Content Include="jqtransformplugin\img\textarea\notneeded\textarea-tr.gif" />
+    <Content Include="jqtransformplugin\img\textarea\textarea-mm-focus.gif" />
+    <Content Include="jqtransformplugin\img\textarea\textarea-mm-hover.gif" />
+    <Content Include="jqtransformplugin\img\textarea\textarea-mm.gif" />
+    <Content Include="jqtransformplugin\img\textarea\textarea_bl.gif" />
+    <Content Include="jqtransformplugin\img\textarea\textarea_bm.gif" />
+    <Content Include="jqtransformplugin\img\textarea\textarea_br.gif" />
+    <Content Include="jqtransformplugin\img\textarea\textarea_ml.gif" />
+    <Content Include="jqtransformplugin\img\textarea\textarea_mr.gif" />
+    <Content Include="jqtransformplugin\img\textarea\textarea_tl.gif" />
+    <Content Include="jqtransformplugin\img\textarea\textarea_tm.gif" />
+    <Content Include="jqtransformplugin\img\textarea\textarea_tr.gif" />
+    <Content Include="jqtransformplugin\jqtransform.css" />
+    <Content Include="jqtransformplugin\jquery.jqtransform.js" />
+    <Content Include="jqtransformplugin\script.js" />
+    <Content Include="js\blank.gif" />
+    <Content Include="js\custom_black.js" />
+    <Content Include="js\custom_blue.js" />
+    <Content Include="js\custom_green.js" />
+    <Content Include="js\custom_red.js" />
+    <Content Include="js\excanvas.js" />
+    <Content Include="js\fancybox\blank.gif" />
+    <Content Include="js\fancybox\fancy_close.png" />
+    <Content Include="js\fancybox\fancy_loading.png" />
+    <Content Include="js\fancybox\fancy_nav_left.png" />
+    <Content Include="js\fancybox\fancy_nav_right.png" />
+    <Content Include="js\fancybox\fancy_shadow_e.png" />
+    <Content Include="js\fancybox\fancy_shadow_n.png" />
+    <Content Include="js\fancybox\fancy_shadow_ne.png" />
+    <Content Include="js\fancybox\fancy_shadow_nw.png" />
+    <Content Include="js\fancybox\fancy_shadow_s.png" />
+    <Content Include="js\fancybox\fancy_shadow_se.png" />
+    <Content Include="js\fancybox\fancy_shadow_sw.png" />
+    <Content Include="js\fancybox\fancy_shadow_w.png" />
+    <Content Include="js\fancybox\fancy_title_left.png" />
+    <Content Include="js\fancybox\fancy_title_main.png" />
+    <Content Include="js\fancybox\fancy_title_over.png" />
+    <Content Include="js\fancybox\fancy_title_right.png" />
+    <Content Include="js\fancybox\jquery.easing-1.3.pack.js" />
+    <Content Include="js\fancybox\jquery.fancybox-1.3.0.css" />
+    <Content Include="js\fancybox\jquery.fancybox-1.3.0.js" />
+    <Content Include="js\fancybox\jquery.fancybox-1.3.0.pack.js" />
+    <Content Include="js\fancybox\jquery.mousewheel-3.0.2.pack.js" />
+    <Content Include="js\hint.js" />
+    <Content Include="js\jquery-ui.js" />
+    <Content Include="js\jquery.img.preload.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="js\jquery.tipsy.js" />
+    <Content Include="js\jwysiwyg\GPL-LICENSE.txt" />
+    <Content Include="js\jwysiwyg\jquery.wysiwyg.css" />
+    <Content Include="js\jwysiwyg\jquery.wysiwyg.gif" />
+    <Content Include="js\jwysiwyg\jquery.wysiwyg.jpg" />
+    <Content Include="js\jwysiwyg\jquery.wysiwyg.js" />
+    <Content Include="js\jwysiwyg\MIT-LICENSE.txt" />
+    <Content Include="js\jwysiwyg\README.txt" />
+    <Content Include="js\visualize\jquery.visualize.js" />
+    <Content Include="js\visualize\visualize.css" />
+    <Content Include="Modules\img\userinfoblack.png" />
+    <Content Include="Modules\img\userinfogreen.png" />
+    <Content Include="Modules\img\userrateblack.png" />
+    <Content Include="Modules\img\userrategreen.png" />
+    <Content Include="Modules\MasterPage.Master" />
+    <Content Include="Modules\DashBoard\AdminDashBoard.aspx" />
+    <Content Include="Modules\Setups\ChangePassword.aspx" />
+    <Content Include="Modules\Setups\Company.aspx" />
+    <Content Include="Modules\Setups\CompanyList.aspx" />
+    <Content Include="Modules\Setups\Currency.aspx" />
+    <Content Include="Modules\Setups\CurrencyList.aspx" />
+    <Content Include="Modules\Setups\Location.aspx" />
+    <Content Include="Modules\Setups\LocationList.aspx" />
+    <Content Include="Modules\Setups\SetupsMenu.aspx" />
+    <Content Include="Modules\Setups\UserMaster.aspx" />
+    <Content Include="Modules\Setups\UserMasterList.aspx" />
+    <Content Include="Modules\Setups\UserRolesList.aspx" />
+    <Content Include="Modules\Setups\UserRoles.aspx" />
+    <Content Include="xml\ErrorMessages.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ERP\BusinessRules\ERP.BusinessRules.csproj">
+      <Project>{8FA3A21E-77D8-4D03-8477-BA7A008EE7F0}</Project>
+      <Name>ERP.BusinessRules</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ERP\DAL\ERP.DAL.csproj">
+      <Project>{692b00c4-db92-44f6-a3fa-d33d4ed335ff}</Project>
+      <Name>ERP.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ERP\Utilities\ERP.Utilities.csproj">
+      <Project>{5C522473-66EA-4305-8EE2-15FDE3C99C66}</Project>
+      <Name>ERP.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="jqtransformplugin\img\input\Thumbs.db" />
+    <None Include="jqtransformplugin\img\textarea\notneeded\Thumbs.db" />
+    <None Include="jqtransformplugin\img\textarea\Thumbs.db" />
+    <None Include="jqtransformplugin\img\Thumbs.db" />
+    <None Include="js\.DS_Store" />
+    <None Include="js\fancybox\.DS_Store" />
+    <None Include="js\jwysiwyg\.DS_Store" />
+    <None Include="js\jwysiwyg\CHANGES" />
+    <None Include="Modules\Setups\SetupsReportSchema.xsc">
+      <DependentUpon>SetupsReportSchema.xsd</DependentUpon>
+    </None>
+    <None Include="Modules\Setups\SetupsReportSchema.xsd" />
+    <None Include="Modules\Setups\SetupsReportSchema.xss">
+      <DependentUpon>SetupsReportSchema.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Images\UploadedImages\" />
+    <Folder Include="obj\Debug\TransformWebConfig\original\" />
+    <Folder Include="obj\Debug\TransformWebConfig\transformed\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>6109</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
